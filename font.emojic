@@ -1,0 +1,25 @@
+📗 ⚖ provides values to align text 📗
+🌍 🦃 ⚖ 🍇
+  📗 Aligns text to the left. 📗
+  🔘⏮
+  📗 Centers the text. 📗
+  🔘↔️
+  📗 Aligns text to the right. 📗
+  🔘⏭
+🍉
+
+📗
+  🕉 represents a font. 🕉 can be used in conjunction with
+  [🏔🔡](t5535657300.html#cm🔡) to draw texts to a drawing target.
+📗
+🌍 📻 🐇 🕉 🍇
+  📗
+    Loads a TrueType font from the given path using the FreeType library.
+
+    The *size* parameter determines the size the font will be rendered at,
+    specified in pixels. The standard font size is measured in units per EM, if
+    you instead want to specify the size as the total height of glyphs in
+    pixels, pass it as a negative value.
+  📗
+  🆕 📄 🚨🌩 path 🔡 size 🔢 📻 🔤allegroNewFont🔤
+🍉

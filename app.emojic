@@ -1,0 +1,104 @@
+📗
+  🏔 represents the application.
+📗
+🌍 📻 🐇 🏔 🍇
+  📗
+    You must call this method before using any of the other methods as it
+    initializes the system. The callback will be called and passed an instance
+    of 🏔 once the application is ready.
+  📗
+  🐇❗️ 🙋 main 🍇🏔🍉 📻 🔤allegroSetup🔤
+
+  📗
+    *Flips* the drawing target display. Copies or updates the front and back
+    buffers so that what has been drawn previously on the drawing target display
+    becomes visible on screen.
+  📗
+  ❗️ 🎦 📻 🔤allegroAppFlip🔤
+
+  📗 Sets *bitmap* as the current drawing target. 📗
+  ❗️ 🏓 bitmap 🖼 📻 🔤allegroAppSetTargetBitmap🔤
+
+  📗
+    Sets the bitmap acting as backbuffer of *display* as the current drawing
+    target.
+  📗
+  ❗️ 🏏 display 📺 📻 🔤allegroAppSetTargetBackbuffer🔤
+
+  📗 Fills the entire drawing target with the given color. 📗
+  ❗️ 🚿 color 🎨 📻 🔤allegroAppClear🔤
+
+  📗
+    Draws a line between the two points ((*x1*|*y1*) and (*x2*|*y2*)).
+  📗
+  ❗️ 🖊 x1 💯 y1 💯 x2 💯 y2 💯 thickness 💯 color 🎨 📻 🔤allegroAppDrawLine🔤
+
+  📗
+    Draws an outlined triangle between the given three points ((*x1*|*y1*),
+    (*x2*|*y2*) and (*x3*|*y3*)).
+  📗
+  ❗️ 📐 x1 💯 y1 💯 x2 💯 y2 💯 x3 💯 y3 💯 thickness 💯 color 🎨 📻 🔤allegroAppDrawTriangle🔤
+
+  📗
+    Draws a filled triangle between the given three points ((*x1*|*y1*),
+    (*x2*|*y2*) and (*x3*|*y3*)).
+  📗
+  ❗️ 🚩 x1 💯 y1 💯 x2 💯 y2 💯 x3 💯 y3 💯 color 🎨 📻 🔤allegroAppDrawFilledTriangle🔤
+
+  📗
+    Draws an outlined rectangle between the two points ((*x1*|*y1*) and
+    (*x2*|*y2*)) which are the upper left and lower right point of the rectangle
+    respectively.
+  📗
+  ❗️ 📋 x1 💯 y1 💯 x2 💯 y2 💯 thickness 💯 color 🎨 📻 🔤allegroAppDrawRectangle🔤
+
+  📗
+    Draws a filled rectangle between the two points ((*x1*|*y1*) and
+    (*x2*|*y2*)) which are the upper left and lower right point of the rectangle
+    respectively.
+  📗
+  ❗️ 🗄 x1 💯 y1 💯 x2 💯 y2 💯 color 🎨 📻 🔤allegroAppDrawFilledRectangle🔤
+
+
+  📗
+    Draws an outlined circle. The center of the circle is the given point
+    ((*x1*|*y1*) and the radius is *r*.
+  📗
+  ❗️ ⚽️ x1 💯 y1 💯 r 💯 thickness 💯 color 🎨 📻 🔤allegroAppDrawCircle🔤
+
+  📗
+    Draws a filled circle. The center of the circle is the given point
+    (*x1*|*y1*) and the radius is *r*.
+  📗
+  ❗️ 🏀 x1 💯 y1 💯 r 💯 color 🎨 📻 🔤allegroAppDrawFilledCircle🔤
+
+  📗
+    Draws an outlined rectangle with rounded corners between the two points
+    ((*x1*|*y1*) and (*x2*|*y2*)) which are the upper left and lower right point
+    of the rectangle respectively.
+  📗
+  ❗️ 🏉 x1 💯 y1 💯 x2 💯 y2 💯 rx 💯 ry 💯 thickness 💯 color 🎨 📻 🔤allegroAppDrawRoundedRectangle🔤
+
+  📗
+    Draws a filled rectangle with rounded corners between the two points
+    ((*x1*|*y1*) and (*x2*|*y2*)) which are the upper left and lower right point
+    of the rectangle respectively.
+  📗
+  ❗️ 🏈 x1 💯 y1 💯 x2 💯 y2 💯 rx 💯 ry 💯 color 🎨 📻 🔤allegroAppDrawFilledRoundedRectangle🔤
+
+  📗
+    Draws the given bitmap at the given location.
+  📗
+  ❗️ 📼 bitmap 🖼 dx 💯 dy 💯 📻 🔤allegroAppDrawBitmap🔤
+
+  📗
+    Draws a scaled and cropped version of the given bitmap at the given
+    location.
+  📗
+  ❗️ 💽 bitmap 🖼 sx 💯 sy 💯 sw 💯 sh 💯 dx 💯 dy 💯 dw 💯 dh 💯 📻 🔤allegroAppDrawScaledBitmap🔤
+
+  📗
+    Draws the given text at the given position in the given font and color.
+  📗
+  ❗️ 🔡 font 🕉 text 🔡 x 💯 y 💯 align ⚖ color 🎨 📻 🔤allegroAppDrawText🔤
+🍉

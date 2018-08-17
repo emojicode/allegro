@@ -1,0 +1,13 @@
+📗
+  📺 represents a display.
+
+  All drawing operations end up being visible on a display which is the same as
+  a window in windowed environments. Thus, before anything is displayed, a
+  display needs to be created.
+📗
+🌍 📻 🐇 📺 🍇
+  📗 Creates a display with the given width and height. 📗
+  🆕 width 🔢 height 🔢 📻 🔤allegroNewDisplay🔤
+  📗 Sets the the title of the window. 📗
+  ❗️ 🏷 title 🔡 📻 🔤allegroDisplaySetTitle🔤
+🍉
