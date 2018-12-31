@@ -133,11 +133,11 @@ extern "C" void allegroAppDrawScaledBitmap(App *app, Bitmap *bitmap, runtime::Re
 
 extern "C" void allegroAppDrawText(App *app, Font *font, s::String *text, runtime::Real x, runtime::Real y,
                                    runtime::Enum align, const Color *color) {
-    al_draw_text(font->value, color->allegroColor(), x, y, align, text->cString());
+    al_draw_text(font->value, color->allegroColor(), x, y, align, text->stdString().c_str());
 }
 
 extern "C" runtime::SimpleError<Bitmap*> allegroNewBitmapPath(s::String *string) {
-    return Bitmap::init(al_load_bitmap(string->cString()));
+    return Bitmap::init(al_load_bitmap(string->stdString().c_str()));
 }
 
 extern "C" runtime::SimpleError<Bitmap*> allegroNewBitmapSize(runtime::Integer w, runtime::Integer h) {
@@ -149,11 +149,11 @@ extern "C" Display* allegroNewDisplay(runtime::Integer width, runtime::Integer h
 }
 
 extern "C" void allegroDisplaySetTitle(Display *display, s::String *title) {
-    al_set_window_title(display->value, title->cString());
+    al_set_window_title(display->value, title->stdString().c_str());
 }
 
 extern "C" runtime::SimpleError<Font*> allegroNewFont(s::String *path, runtime::Integer size) {
-    return Font::init(al_load_font(path->cString(), size, 0));
+    return Font::init(al_load_font(path->stdString().c_str(), size, 0));
 }
 
 extern "C" Queue* allegroNewEventQueue() {
@@ -210,8 +210,16 @@ extern "C" runtime::Integer allegroKeyDownCode(EventCharacter *event) {
     return event->value.keyboard.keycode;
 }
 
-extern "C" runtime::Integer allegroKeyPressSymbol(EventCharacter *event) {
-    return static_cast<runtime::Integer>(event->value.keyboard.unichar);
+extern "C" runtime::SimpleOptional<s::String*> allegroKeyPressString(EventCharacter *event) {
+    auto c = event->value.keyboard.unichar;
+    if (c < 1) {
+        return runtime::NoValue;
+    }
+    auto newString = s::String::init();
+    newString->count = 1;
+    newString->characters = runtime::allocate<char>(1);
+    newString->characters.get()[0] = c;
+    return newString;
 }
 
 extern "C" runtime::Boolean allegroKeyPressRepeated(EventCharacter *event) {

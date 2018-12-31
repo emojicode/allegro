@@ -68,19 +68,11 @@
   📗 Returns the keycode associated with this event. 📗
   ❗️ 📟 ➡️ 🔢 📻 🔤allegroKeyPressCode🔤
 
-  🔒❗️🆎 ➡️ 🔢 📻 🔤allegroKeyPressSymbol🔤
-
   📗
-    Returns the symbol that was typed. This may be ✨ if the pressed key cannot
-    be represented as a symbol, e.g. if an arrow key was pressed.
+    Returns the character that was typed. No value is returned if the pressed
+    key does not map to a character, e.g. if an arrow key was pressed.
   📗
-  ❗️ 🔣 ➡️ 🍬🔣 🍇
-    🆎🐕❗️ ➡️ code
-    ↪️ code ◀️ 1 🍇
-      ↩️ 🤷‍♀️
-    🍉
-    ↩️ 🔣code❗️
-  🍉
+  ❗️🔣 ➡️ 🍬🔡 📻 🔤allegroKeyPressString🔤
 
   📗 Whether the character was repeated. 📗
   ❗️ 🔃 ➡️ 👌 📻 🔤allegroKeyPressRepeated🔤
