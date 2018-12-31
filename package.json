@@ -1,0 +1,10 @@
+{
+  "name": "emojiallegro",
+  "version": "0.1.0",
+  "description": "Emojicode package to create simple games and user interfaces with the allegro library.",
+  "repository": "git@github.com:emojicode/allegro.git",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "cmake . && make"
+  }
+}

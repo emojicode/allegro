@@ -13,7 +13,7 @@ set(PACKAGE_FILE main.o)
 add_library(${LIBRARY_NAME} STATIC ${SOURCES} ${PACKAGE_FILE})
 set_property(TARGET ${LIBRARY_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
 target_compile_options(${LIBRARY_NAME} PUBLIC -Wall -Wno-unused-result -Wno-missing-braces -pedantic)
-add_custom_command(OUTPUT ${PACKAGE_FILE} COMMAND emojicodec -p ${LIBRARY_NAME} -o ${PACKAGE_FILE} -i interface.emojii --color
+add_custom_command(OUTPUT ${PACKAGE_FILE} COMMAND emojicodec -p ${LIBRARY_NAME} -o ${PACKAGE_FILE} -i interface.emojii --color -r
                    -c ${MAIN_FILE} DEPENDS ${EMOJIC_DEPEND})
 
 find_library(SYSTEM_ALLEGRO NAMES allegro)
