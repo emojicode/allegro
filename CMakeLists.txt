@@ -10,6 +10,8 @@ file(GLOB EMOJIC_DEPEND "*.emojic")
 get_filename_component(MAIN_FILE main.emojic ABSOLUTE)
 set(PACKAGE_FILE main.o)
 
+include_directories(/usr/local/include)
+
 add_library(${LIBRARY_NAME} STATIC ${SOURCES} ${PACKAGE_FILE})
 set_property(TARGET ${LIBRARY_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
 target_compile_options(${LIBRARY_NAME} PUBLIC -Wall -Wno-unused-result -Wno-missing-braces -pedantic)

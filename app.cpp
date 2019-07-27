@@ -136,11 +136,11 @@ extern "C" void allegroAppDrawText(App *app, Font *font, s::String *text, runtim
     al_draw_text(font->value, color->allegroColor(), x, y, align, text->stdString().c_str());
 }
 
-extern "C" runtime::SimpleError<Bitmap*> allegroNewBitmapPath(s::String *string) {
+extern "C" Bitmap* allegroNewBitmapPath(s::String *string, runtime::Raiser *raiser) {
     return Bitmap::init(al_load_bitmap(string->stdString().c_str()));
 }
 
-extern "C" runtime::SimpleError<Bitmap*> allegroNewBitmapSize(runtime::Integer w, runtime::Integer h) {
+extern "C" Bitmap* allegroNewBitmapSize(runtime::Integer w, runtime::Integer h, runtime::Raiser *raiser) {
     return Bitmap::init(al_create_bitmap(w, h));
 }
 
@@ -152,7 +152,7 @@ extern "C" void allegroDisplaySetTitle(Display *display, s::String *title) {
     al_set_window_title(display->value, title->stdString().c_str());
 }
 
-extern "C" runtime::SimpleError<Font*> allegroNewFont(s::String *path, runtime::Integer size) {
+extern "C" Font* allegroNewFont(s::String *path, runtime::Integer size, runtime::Raiser *raiser) {
     return Font::init(al_load_font(path->stdString().c_str(), size, 0));
 }
 

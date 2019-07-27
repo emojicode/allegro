@@ -26,36 +26,12 @@
   🍉
 🍉
 
-📗 Errors 📗
-🌍 🦃 🌩 🍇
-  📗 Indicates a generic error. 📗
-  🔘 🛑
-  📗 Permission denied 📗
-  🔘 🚧
-  📗 File exists 📗
-  🔘 🗿
-  📗 Not enough space. 📗
-  🔘 🐁
-  📗 Function not supported. 📗
-  🔘 🆘
-  📗 Mathematics argument out of domain of function. 📗
-  🔘 ⏺
-  📗 Invalid argument. 📗
-  🔘 🚯
-  📗 Illegal byte sequence. 📗
-  🔘 🛃
-  📗 Result too large. 📗
-  🔘 🗻
-  📗 Operation not permitted. 📗
-  🔘 🚷
-🍉
-
 📗 🖼 represents a bitmap. 📗
 🌍 📻 🐇 🖼 🍇
   📗 Creates a bitmap from the image at the given path. 📗
-  🆕 📄🚨🌩  path 🔡 📻 🔤allegroNewBitmapPath🔤
+  🆕 📄 path 🔡 🚧🚧🔸↕️ 📻 🔤allegroNewBitmapPath🔤
   📗 Creates a bitmap with the given height and width. 📗
-  🆕 🚨🌩 width 🔢 height 🔢 📻 🔤allegroNewBitmapSize🔤
+  🆕 width 🔢 height 🔢 🚧🚧🔸↕️ 📻 🔤allegroNewBitmapSize🔤
 🍉
 
 📜 🔤font.emojic🔤
